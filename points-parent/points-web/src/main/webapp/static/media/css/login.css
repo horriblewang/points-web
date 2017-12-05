@@ -1,0 +1,144 @@
+/***
+Login page
+***/
+
+/* logo page */
+.login {
+  background-color: #456 !important;
+}
+
+.login .logo {
+  margin: 0 auto;   
+  margin-top:30px;
+  padding: 0 15px 15px 0;
+  text-align: left;
+}
+
+.login .content h3 {
+  color: #000;
+  padding-bottom: 20px;
+}
+.login .content h4  {
+  color: #555;
+}
+
+.login .content p {
+  color: #222;
+}
+
+.login .content .login-form,
+.login .content .forget-form {
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+.login .content .m-wrap {
+  width: 249px;
+  border-left: 0 !important;
+  background-color: #fff !important;
+}
+
+.login .content .input-icon {
+  border-left: 2px solid #35aa47 !important;
+  margin-left: 40px;
+}
+
+.login .content .control-group {
+  margin-bottom: 20px !important;
+}
+
+.login .content .input-icon .m-wrap {  
+  margin: 0px !important;
+}
+
+.login .content .forget-form {
+  display: none;
+}
+
+.login .content .register-form {
+  display: none;
+}
+
+.login .content .form-title {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.login .content .form-actions {
+  clear: both;
+  border-width: 0px !important;
+  padding-right: 40px !important;
+  margin-left: -100px;
+  background-color: transparent !important;
+}
+
+.login .content .forget-form .form-actions {
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}  
+
+.login .content .register-form .form-actions {
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.login .content .form-actions .checkbox {
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.login .content .form-actions .btn {
+  margin-top: 1px;
+}
+
+.login .content .forget-password {
+  margin-top: 25px;
+}
+
+.login .content .create-account {
+  border-top: 1px dotted #eee;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.login .content .create-account a {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.login .copyright {
+  text-align: center;
+  width: 250px;
+  margin: 0 auto; 
+  padding: 10px 10px 0 10px;
+  color: #999;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  /***
+  Login page
+  ***/
+  .login .logo {
+    margin-top:10px;
+  }
+
+  .login .content {
+    padding: 30px; 
+    width: 222px;
+  }
+
+  .login .content h3 {
+    font-size: 22px;
+  }
+
+  .login .content .m-wrap {
+      width: 180px;
+  }
+
+  .login .checkbox {
+    font-size: 13px;
+  }
+}

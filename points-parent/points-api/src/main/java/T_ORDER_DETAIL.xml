@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="C:\bailian\mysql-connector-java-5.1.38.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/points?characterEncoding=utf8" userId="root"
+			password="www521241" />
+		<javaModelGenerator targetPackage="com.bailian.entity" targetProject="points-api" />
+		<sqlMapGenerator targetPackage="com.bailian.persistence" targetProject="points-api" />
+		<javaClientGenerator targetPackage="com.bailian.persistence" targetProject="points-api" type="XMLMAPPER" />
+		<table tableName="T_ORDER_DETAIL" domainObjectName="OrderDetail">
+		  <columnOverride column="DETAIL_ID"    property="detailId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="ORDER_ID"     property="orderId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="GOODS_ID"     property="goodsId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="GOODS_NUM"    property="goodsNum" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="GOODS_POINTS" property="goodsPoints" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="GOODS_NAME" property="goodsName" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="CREATE_TIME"  property="createTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+		</table>
+	</context>
+</generatorConfiguration>

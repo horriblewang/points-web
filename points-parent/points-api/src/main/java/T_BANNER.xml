@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="C:\bailian\mysql-connector-java-5.1.38.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/points" userId="root"
+			password="www521241" />
+		<javaModelGenerator targetPackage="com.bailian.entity" targetProject="points-api" />
+		<sqlMapGenerator targetPackage="com.bailian.persistence" targetProject="points-api" />
+		<javaClientGenerator targetPackage="com.bailian.persistence" targetProject="points-api" type="XMLMAPPER" />
+		<table tableName="T_BANNER" domainObjectName="Banner">
+		  <columnOverride column="BAN_ID"        property="banId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="BAN_URL"       property="banUrl" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="JUMP_URL"      property="jumpUrl" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="BAN_NAME"      property="banName" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="BAN_TYPE"      property="banType" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="RESERVE1"      property="reserve1" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="RESERVE2"      property="reserve2" javaType="String" jdbcType="VARCHAR" />
+		  <columnOverride column="ORDER_SEC"     property="orderSec" javaType="Long" jdbcType="BIGINT" />
+		  <columnOverride column="STATUS"  		 property="status" javaType="String" jdbcType="VARCHAR" />
+		  <columnOverride column="CREATE_TIME"   property="createTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+		</table>
+	</context>
+</generatorConfiguration>

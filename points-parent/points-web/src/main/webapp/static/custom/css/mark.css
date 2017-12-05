@@ -1,0 +1,45 @@
+div.radius_shadow {
+	border: 1px solid #DBDBDB;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	-webkit-box-shadow: 0 0 10px #414141;
+	-moz-box-shadow: 0 0 10px #414141;
+	box-shadow: 0 0 10px #414141;
+	font-size: 12px;
+	background: #fff;
+}
+
+span#radius {
+	display: inline-block;
+	float: none;
+	font-size: 12px;
+	padding: 2px 5px;
+	margin: 0 5px;
+	border: 1px solid #000;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.tabinput {
+	margin-left: 5px;
+}
+
+a#deltab {
+	cursor: pointer;
+	display: inline-block;
+	color: #F0B842;
+	margin-left: 5px
+}
+
+a#deltab:hover {
+	color: #E09D12;
+}
+
+span {
+	float: left;
+}

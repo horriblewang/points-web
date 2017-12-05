@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="C:\bailian\mysql-connector-java-5.1.38.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.20.103.232:3306/points?characterEncoding=utf8" userId="app"
+			password="123456" />
+		<javaModelGenerator targetPackage="com.bailian.entity" targetProject="points-api" />
+		<sqlMapGenerator targetPackage="com.bailian.persistence" targetProject="points-api" />
+		<javaClientGenerator targetPackage="com.bailian.persistence" targetProject="points-api" type="XMLMAPPER" />
+		<table tableName="T_GOODS" domainObjectName="Goods">
+          <columnOverride column="GOODS_ID"      property="goodsId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="GOODS_NAME"    property="goodsName" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="GOODS_POINTS"  property="goodsPoints" javaType="Long" jdbcType="BIGINT" />
+		  <columnOverride column="CREATE_TIME"   property="createTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+          <columnOverride column="UPDATE_TIME"   property="updateTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+          <columnOverride column="APP_PIC_URL"   property="appPicUrl" javaType="String" jdbcType="VARCHAR" />
+		  <columnOverride column="PC_PIC_URL"    property="pcPicUrl" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="IS_DELETE"     property="isDelete" javaType="String" jdbcType="VARCHAR" />
+		</table>
+	</context>
+</generatorConfiguration>

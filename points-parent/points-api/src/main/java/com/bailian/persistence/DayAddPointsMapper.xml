@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bailian.persistence.DayAddPointsMapper" >
+  <select id="getDayAddMemberInfo" resultType="com.bailian.dto.DayMemPointsDto">
+	 SELECT A.MEMBER_ID as "memberId", SUM(DAY_POINTS) as "addPoints"
+	  FROM (select t1.MEMBER_ID, t2.DAY_POINTS
+	          from T_ORDER_INFO t1
+	          LEFT JOIN T_RULE_INFO t2 ON t1.RULE_ID = t2.RULE_ID) A
+	 GROUP BY A.MEMBER_ID
+  </select>
+  
+  <update id="updateMemPoints" parameterType="List">
+	  UPDATE T_MEMBER_INFO A,
+     <foreach collection="members" item="record" open="(" close=")" separator="union all">
+  	  SELECT 
+  	    #{record.memberId} AS MEMBER_ID,
+  	    #{record.addPoints} AS POINTS 
+  	  FROM DUAL
+     </foreach> B
+	 SET A.POINTS = A.POINTS + B.POINTS
+	 WHERE A.MEMBER_ID = B.MEMBER_ID
+  </update>
+</mapper>

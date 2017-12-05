@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="C:\bailian\mysql-connector-java-5.1.38.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/points?characterEncoding=utf8" userId="root"
+			password="www521241" />
+		<javaModelGenerator targetPackage="com.bailian.entity" targetProject="points-api" />
+		<sqlMapGenerator targetPackage="com.bailian.persistence" targetProject="points-api" />
+		<javaClientGenerator targetPackage="com.bailian.persistence" targetProject="points-api" type="XMLMAPPER" />
+		<table tableName="T_XTGL_USER" domainObjectName="User">
+          <columnOverride column="USER_ID"      property="userId" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="USER_NAME"    property="userName" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="MOBILE"       property="mobile" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="REFER_TO"     property="referTo" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="PASS_WORD"    property="passWord" javaType="String" jdbcType="VARCHAR" />
+          <columnOverride column="AUTH_LIMIT"   property="authLimit" javaType="Long" jdbcType="BIGINT" />
+          <columnOverride column="LOGIN_TIME"   property="loginTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+          <columnOverride column="CREATE_TIME"  property="createTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+          <columnOverride column="UPDATE_TIME"  property="updateTime" javaType="java.sql.Timestamp" jdbcType="DATE" />
+		</table>
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<server>
+  <subsystemList>
+    <subsystem code="666" name="smartcloud服务测试">
+      <functionnoList>
+        <functionno>
+          <code>100</code>
+          <name>客户注册</name>
+          <param>telephone|password|</param>
+          <paramtype>String|String|</paramtype>
+          <value>18616887071|112233|</value>
+          <paramname>手机号|密码|</paramname>
+          <paramdesc>手机号|密码|</paramdesc>
+        </functionno>
+
+		 <functionno>
+          <code>101</code>
+          <name>发送短信验证码</name>
+          <param>telephone|</param>
+          <paramtype>String|</paramtype>
+          <value>18616887071|</value>
+          <paramname>手机号|</paramname>
+          <paramdesc>手机号|</paramdesc>
+        </functionno>
+
+		 <functionno>
+          <code>102</code>
+          <name>用户登录</name>
+          <param>telephone|password|</param>
+          <paramtype>String|String|</paramtype>
+          <value>18616887071|112233|</value>
+          <paramname>手机号|密码|</paramname>
+          <paramdesc>手机号|密码|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>300</code>
+          <name>证券组合查询</name>
+          <param>userCode|</param>
+          <paramtype>String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|</value>
+          <paramname>客户编号|</paramname>
+          <paramdesc>客户编号|</paramdesc>
+        </functionno>
+
+		<functionno>
+          <code>301</code>
+          <name>新增证券组合</name>
+          <param>userCode|portfolioName|portfolioMemo</param>
+          <paramtype>String|String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|112233|18616887071|</value>
+          <paramname>客户编号|证券组编号|组合备注|</paramname>
+          <paramdesc>客户编号|证券组编号|组合备注|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>302</code>
+          <name>修改证券组合</name>
+          <param>userCode|portfolioId|portfolioName|portfolioMemo</param>
+          <paramtype>String|String|String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|112233|18616887071|</value>
+          <paramname>客户编号|证券组编号|组合名称|组合备注|</paramname>
+          <paramdesc>客户编号|证券组编号|组合名称|组合备注|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>303</code>
+          <name>删除证券组合</name>
+          <param>userCode|portfolioId|</param>
+          <paramtype>String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|</value>
+          <paramname>客户编号|证券组编号|</paramname>
+          <paramdesc>客户编号|证券组编号|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>304</code>
+          <name>查询证券列表</name>
+          <param>userCode|portfolioId|</param>
+          <paramtype>String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|</value>
+          <paramname>客户编号|证券组编号|</paramname>
+          <paramdesc>客户编号|证券组编号|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>305</code>
+          <name>新增证券</name>
+          <param>userCode|portfolioId|stockType|stockCode|stockName|buyPrice|sellPrice|buyType|sellType|stockWeight|stockMemo|</param>
+          <paramtype>String|String|String|String|String|String|String|String|String|String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|1|601377|兴业证券|8.77|9.88|1|1|30.23|优先权购买|</value>
+          <paramname>客户编号|证券组编号|证券类型(沪A)|证券编码|证券名称|买入价|卖出价格|买入价位|卖出价位|权重|备注|</paramname>
+          <paramname>客户编号|证券组编号|证券类型(沪A)|证券编码|证券名称|买入价|卖出价格|买入价位|卖出价位|权重|备注|</paramname>
+        </functionno>
+
+
+
+		<functionno>
+          <code>306</code>
+          <name>删除证券</name>
+          <param>userCode|portfolioId|detailId|</param>
+          <paramtype>String|String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|1|</value>
+          <paramname>客户编号|证券组编号|明细编号|</paramname>
+          <paramdesc>客户编号|证券组编号|明细编号|</paramdesc>
+        </functionno>
+
+
+		<functionno>
+          <code>307</code>
+          <name>修改证券</name>
+          <param>userCode|portfolioId|detailId|stockType|stockCode|stockName|buyPrice|sellPrice|buyType|sellType|stockWeight|stockMemo|</param>
+          <paramtype>String|String|String|String|String|String|String|String|String|String|String|String|</paramtype>
+          <value>63bb3de8290f4817ab0d41c43f102d58|6|1|1|601377|兴业证券|8.77|9.88|1|1|30.23|优先权购买|</value>
+          <paramname>客户编号|证券组编号|证券明细ID|证券类型(沪A)|证券编码|证券名称|买入价|卖出价格|买入价位|卖出价位|权重|备注|</paramname>
+          <paramname>客户编号|证券组编号|证券明细ID|证券类型(沪A)|证券编码|证券名称|买入价|卖出价格|买入价位|卖出价位|权重|备注|</paramname>
+        </functionno>
+
+
+      </functionnoList>
+    </subsystem>
+  </subsystemList>
+</server>
